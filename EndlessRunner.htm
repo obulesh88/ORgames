@@ -1390,40 +1390,7 @@
 				// RESIZING THE CANVAS TO FIT THE WINDOW
 				resizeCanvasToFitWindow();
 				});
-
-			window.addEventListener("load", function()
-				{
-				// CHECKING IF IT IS AN ANDROID DEVICE AND NOT AN IOS DEVICE (BECAUSE IN IOS THE TOUCHSTART EVENT DOES NOT WORK TO RESUME THE AUDIO CONTEXT)
-				if (isMobileDevice()==true && usingiOS()==false)
-					{
-					// SETTING WHAT WILL HAPPEN WHEN THE USER TOUCHES THE SOUND BUTTON CONTAINER
-					document.getElementsByClassName("endlessrunner-soundhandler-container")[0].addEventListener("touchstart",function(event){soundToggle();});
-
-					// SETTING WHAT WILL HAPPEN WHEN THE USER TOUCHES THE FACEBOOK BUTTON CONTAINER
-					document.getElementById("endlessrunner-gameover-facebook-container").addEventListener("touchstart",function(event){window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(URL_TO_SHARE));});
-
-					// SETTING WHAT WILL HAPPEN WHEN THE USER TOUCHES THE RESTART BUTTON CONTAINER
-					document.getElementById("endlessrunner-gameover-restart-container").addEventListener("touchstart",function(event){startGame();});
-
-					// SETTING WHAT WILL HAPPEN WHEN THE USER TOUCHES THE TWITTER BUTTON CONTAINER
-					document.getElementById("endlessrunner-gameover-twitter-container").addEventListener("touchstart",function(event){window.open("https://www.twitter.com/share?url=" + encodeURIComponent(URL_TO_SHARE));});
-					}
-					else
-					{
-					// SETTING WHAT WILL HAPPEN WHEN THE USER CLICKS THE SOUND BUTTON CONTAINER
-					document.getElementsByClassName("endlessrunner-soundhandler-container")[0].addEventListener("click",function(event){soundToggle();});
-
-					// SETTING WHAT WILL HAPPEN WHEN THE USER CLICKS THE FACEBOOK BUTTON CONTAINER
-					document.getElementById("endlessrunner-gameover-facebook-container").addEventListener("click",function(event){window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(URL_TO_SHARE));});
-
-					// SETTING WHAT WILL HAPPEN WHEN THE USER CLICKS THE RESTART BUTTON CONTAINER
-					document.getElementById("endlessrunner-gameover-restart-container").addEventListener("click",function(event){startGame();});
-
-					// SETTING WHAT WILL HAPPEN WHEN THE USER CLICKS THE TWITTER BUTTON CONTAINER
-					document.getElementById("endlessrunner-gameover-twitter-container").addEventListener("click",function(event){window.open("https://www.twitter.com/share?url=" + encodeURIComponent(URL_TO_SHARE));});
-					}
-
-				// HANDLING THE KEY EVENTS
+			     // HANDLING THE KEY EVENTS
 				window.addEventListener("keydown", function ()
 					{
 					if (event.keyCode === 37 || event.keyCode === 65) // LEFT KEY OR A
