@@ -1,6 +1,5 @@
 const filesToCache = [
 	"EndlessRunner.htm",
-	"EndlessRunner.js",
 	"EndlessRunner.json",
 	"EndlessRunner.png",
 	"EndlessRunnerFavIcon_16x16.png",
